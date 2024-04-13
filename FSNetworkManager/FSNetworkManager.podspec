@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FSNetworkManager"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "FSNetworkManager is an iOS framework that simplifies REST API communication, allowing developers to focus on crafting exceptional user experiences while effortlessly managing networking tasks."
   spec.description  = "FSNetworkManager is an iOS framework engineered to streamline REST API communication, providing developers with a seamless interface to effortlessly manage networking tasks. By abstracting away complexities, it enables a focus on crafting superior user experiences while ensuring robust and reliable data exchange."
   spec.homepage     = "https://github.com/faisal330/FSNetworkManager"
