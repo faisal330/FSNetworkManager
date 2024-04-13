@@ -1,0 +1,16 @@
+PODS:
+  - FSNetworkManager (1.0.0)
+
+DEPENDENCIES:
+  - FSNetworkManager
+
+SPEC REPOS:
+  trunk:
+    - FSNetworkManager
+
+SPEC CHECKSUMS:
+  FSNetworkManager: ce99077882f0772f5847100e9c07526017764d40
+
+PODFILE CHECKSUM: 5b894fba5f79f2edc36864cce68d1df444178dea
+
+COCOAPODS: 1.14.3

@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import FSNetworkManager
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        NetworkManager.test()
+        
     }
 
 

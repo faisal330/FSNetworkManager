@@ -1,0 +1,6 @@
+framework module FSNetworkManager {
+  umbrella header "FSNetworkManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
