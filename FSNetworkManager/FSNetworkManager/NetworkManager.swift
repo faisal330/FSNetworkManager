@@ -13,5 +13,8 @@ public struct NetworkManager {
         print("it is a frameword test")
     }
     
+    public static func test2() {
+        print("it is a frameword test2")
+    }
     
 }
