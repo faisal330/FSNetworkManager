@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FSNetworkManager"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.homepage     = "https://github.com/faisal330/FSNetworkManager"
   spec.license      = "MIT"
   spec.author       = { "Faisal Shahzad" => "faisalshahzad330@gmail.com" }
