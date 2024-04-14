@@ -1,16 +1,16 @@
 PODS:
-  - FSNetworkManager (1.0.0)
+  - FSNetworkManager (1.1.0)
 
 DEPENDENCIES:
-  - FSNetworkManager
+  - FSNetworkManager (from `../FSNetworkManager`)
 
-SPEC REPOS:
-  trunk:
-    - FSNetworkManager
+EXTERNAL SOURCES:
+  FSNetworkManager:
+    :path: "../FSNetworkManager"
 
 SPEC CHECKSUMS:
-  FSNetworkManager: ce99077882f0772f5847100e9c07526017764d40
+  FSNetworkManager: 5b025f96d4081173f8869e5ac9d09d52cee3913f
 
-PODFILE CHECKSUM: 5b894fba5f79f2edc36864cce68d1df444178dea
+PODFILE CHECKSUM: 9f9d585249231e6e2ddec581bf37007e4b95add3
 
 COCOAPODS: 1.14.3

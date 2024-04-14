@@ -9,6 +9,13 @@ import Foundation
 
 public typealias completionHandler = ((Data?, URLResponse?, Error?, URLRequest?)->Void)
 
+public protocol RequestProtocol {
+    
+    func sendGetRequest(_ url: String, params: [String:Any], headers: [String: Any], onComplete: @escaping completionHandler)
+    
+    func sendRequest(method: HTTPMethod, _ url: String, body: [String: Any], headers: [String: Any], params: [String: Any], onComplete: @escaping completionHandler)
+}
+
 public enum HTTPMethod:String {
     case POST
     case PATCH
@@ -16,10 +23,10 @@ public enum HTTPMethod:String {
     case DELETE
 }
 
-public class NetworkManager: NSObject {
-
+public class NetworkManager: RequestProtocol {
+   
     public static let shared = NetworkManager()
-    private override init() {}
+    private init() {}
     private var APIKey: String!
     
     public func provideAPIKey(_ apiKey: String) {
@@ -38,8 +45,7 @@ public class NetworkManager: NSObject {
         }
     }
     
-    public func sendGetRequest(_ url: String, params: [String:Any] = [:], headers: [String: Any] = [:], onComplete: @escaping completionHandler) {
-        
+    public func sendGetRequest(_ url: String, params: [String : Any] = [:], headers: [String : Any] = [:], onComplete: @escaping completionHandler) {
         var modifiedParams = params
         self.appendAPIKey(in: &modifiedParams)
         
@@ -67,10 +73,10 @@ public class NetworkManager: NSObject {
         }
         
         self.startURLSession(request: request, onComplete: onComplete);
-        
     }
     
-    func sendRequest(method: HTTPMethod, _ url: String, body: [String: Any], headers: [String: Any] = [:], params: [String: Any] = [:], onComplete: @escaping completionHandler) {
+    
+    public func sendRequest(method: HTTPMethod, _ url: String, body: [String: Any], headers: [String: Any] = [:], params: [String: Any] = [:], onComplete: @escaping completionHandler) {
         
         var modifiedParams = params
         self.appendAPIKey(in: &modifiedParams)
